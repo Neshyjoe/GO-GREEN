@@ -1,0 +1,67 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.logo img{
+    width: 150px;
+    height: 100px;
+    border-radius: 1%;
+
+  }
+
+/* Sections Styling */
+.welcome {
+    background: #2ecc71;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.registration, .giveaway, .about, .contact {
+    padding: 2rem 0;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+}
+
+input, select, textarea, button {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+}
+
+button {
+    background: #27ae60;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Voting Section */
+.candidates {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.candidate {
+    background: #ecf0f1;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+    border-radius: 5px;
+}

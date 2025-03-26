@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GO-GREEN Initiative</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="logo">
+        <img src="image/go green.jpg" alt="Joash Victor picture">
+      </div>
+
+    <section class="welcome">
+        <div class="container">
+            <h1>GO-GREEN Initiative</h1>
+        </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="welcome">
+        <div class="container">
+            <h1>Welcome to the GO-GREEN Initiative</h1>
+            <p></p>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section class="registration">
+        <div class="container">
+            <h2>Register Now</h2>
+            <form id="registrationForm">
+                <input type="text" placeholder="Full Name" required>
+                <select>
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <input type="number" placeholder="Age" min="1" required>
+                <input type="text" placeholder="Health Issues (if any)">
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Charity Giveaway Section -->
+    <section class="giveaway">
+        <div class="container">
+            <h2>Eco-Champion Vote</h2>
+            <div class="candidates">
+                <div class="candidate">
+                    <h3>Joash Victor</h3>
+                    <p>Votes: <span id="candidate1">0</span></p>
+                    <button onclick="vote(1)">Vote</button>
+                </div>
+                <div class="candidate">
+                    <h3>Martha Mercy</h3>
+                    <p>Votes: <span id="candidate2">0</span></p>
+                    <button onclick="vote(2)">Vote</button>
+                </div>
+                <div class="candidate">
+                    <h3>Laban Kelvin</h3>
+                    <p>Votes: <span id="candidate3">0</span></p>
+                    <button onclick="vote(3)">Vote</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>

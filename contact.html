@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Contact Us Section -->
+    <section class="contact">
+        <div class="booking-section">
+            <h2>Book Us Now</h2>
+            <form id="bookingForm" action="https://formspree.io/f/mgvaepoq" method="POST">
+              <div class="form-row">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+          
+              <div class="form-row">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+          
+              <div class="form-row">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+              </div>
+          
+              <div class="form-row">
+                <label for="Feedback">Feed back:</label>
+              </div>
+          
+              <div class="form-row">
+                <label for="message">comment:</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+              </div>
+          
+              <button type="submit">Submit feedback</button>
+            </form>
+          </div>
+    </section>
+</html>

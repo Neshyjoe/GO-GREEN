@@ -1,22 +1,31 @@
 {
-    "users": [],
-    "votes": [],
-    "contacts": [],
-    "candidates": [
-      {
-        "id": 1,
-        "name": "Joash Victor",
-        "votes": 160
-      },
-      {
-        "id": 2,
-        "name": "Martha Mercy",
-        "votes": 121
-      },
-      {
-        "id": 3,
-        "name": "Laban Kelvin",
-        "votes": 167
-      }
-    ]
-  }
+  "users": [
+    {
+      "id": "fb67",
+      "name": "joash",
+      "gender": "male",
+      "age": "21",
+      "healthIssues": "none",
+      "timestamp": "2025-03-26T22:23:53.555Z"
+    }
+  ],
+  "votes": [],
+  "contacts": [],
+  "candidates": [
+    {
+      "id": "1",
+      "name": "Joash Victor",
+      "votes": 188
+    },
+    {
+      "id": "2",
+      "name": "Martha Mercy",
+      "votes": 136
+    },
+    {
+      "id": "3",
+      "name": "Laban Kelvin",
+      "votes": 173
+    }
+  ]
+}

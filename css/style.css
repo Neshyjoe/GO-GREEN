@@ -12,13 +12,32 @@ body {
     overflow: hidden;
 }
 
-.logo img{
+.img{
     width: 150px;
     height: 100px;
     border-radius: 1%;
+    justify-content: center;
+    padding:20px;
+    margin:10px;
+
 
   }
+  
 
+
+  nav{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;  
+  }
+
+  nav a{
+    color: rgb(10, 77, 4);
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  
 /* Sections Styling */
 .welcome {
     background: #2ecc71;
@@ -44,6 +63,40 @@ input, select, textarea, button {
     padding: 0.5rem;
 }
 
+.booking-section {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #dadfda;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .booking-section h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-row {
+    margin-bottom: 1rem;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+  }
+  
+  input, select, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+
 button {
     background: #27ae60;
     color: white;
@@ -64,4 +117,52 @@ button {
     margin: 1rem;
     text-align: center;
     border-radius: 5px;
+}
+
+/* Footer Style */
+.site-footer {
+  background: #2ecc71;
+  color: white;
+  padding: 2rem 0;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.footer-content {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 1rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 0.5rem 0;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.3);
 }

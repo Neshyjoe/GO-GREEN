@@ -1,37 +1,38 @@
 // Server URL
 const API_URL = 'http://localhost:3000';
 
-// Voting System
+e.preventDefault ();
+// Voting System - Optimized Version
 async function vote(candidateId) {
   try {
     // Get current candidate
     const response = await fetch(`${API_URL}/candidates/${candidateId}`);
     const candidate = await response.json();
     
-    // Update votes
-    const updatedCandidate = {
-      ...candidate,
-      votes: candidate.votes + 1
-    };
+    // Optimistic UI update
+    const newVotes = candidate.votes + 1;
+    const voteElement = document.getElementById(`candidate${candidateId}`);
+    voteElement.textContent = newVotes;
 
+    // Update server
     await fetch(`${API_URL}/candidates/${candidateId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(updatedCandidate),
+      body: JSON.stringify({
+        ...candidate,
+        votes: newVotes
+      }),
     });
 
-    updateVoteDisplay(candidateId);
   } catch (error) {
     console.error('Error voting:', error);
+    // Revert UI on error
+    const voteElement = document.getElementById(`candidate${candidateId}`);
+    voteElement.textContent = candidate.votes;
+    alert('Vote failed - please try again!');
   }
-}
-
-async function updateVoteDisplay(candidateId) {
-  const response = await fetch(`${API_URL}/candidates/${candidateId}`);
-  const candidate = await response.json();
-  document.getElementById(`candidate${candidateId}`).textContent = candidate.votes;
 }
 
 // Registration Form
@@ -58,6 +59,7 @@ document.getElementById('registrationForm').addEventListener('submit', async (e)
     e.target.reset();
   } catch (error) {
     console.error('Registration error:', error);
+    alert('Registration failed - please try again!');
   }
 });
 
@@ -84,6 +86,7 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
     e.target.reset();
   } catch (error) {
     console.error('Error sending message:', error);
+    alert('Message failed to send - please try again!');
   }
 });
 
@@ -101,5 +104,6 @@ window.addEventListener('DOMContentLoaded', async () => {
     });
   } catch (error) {
     console.error('Error initializing votes:', error);
+    alert('Could not load voting data - please refresh the page!');
   }
 });

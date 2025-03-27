@@ -12,7 +12,7 @@ async function vote(candidateId) {
     const newVotes = candidate.votes + 1;
     const voteElement = document.getElementById(`candidate${candidateId}`);
     if (voteElement) {
-      voteElement.textContent = newVotes; // Update the displayed vote count
+      voteElement.textContent = newVotes; 
     }
 
     // Update server with the new vote count

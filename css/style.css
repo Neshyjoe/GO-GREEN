@@ -119,6 +119,17 @@ button {
     border-radius: 5px;
 }
 
+.candidate span {
+  transition: all 0.3s ease;
+}
+
+.candidate button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+
+
 /* Footer Style */
 .site-footer {
   background: #2ecc71;

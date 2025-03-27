@@ -1,20 +1,21 @@
-// Server URL
+// Server URL 
 const API_URL = 'http://localhost:3000';
 
-e.preventDefault ();
 // Voting System - Optimized Version
 async function vote(candidateId) {
   try {
-    // Get current candidate
+    // Get current candidate data
     const response = await fetch(`${API_URL}/candidates/${candidateId}`);
     const candidate = await response.json();
     
     // Optimistic UI update
     const newVotes = candidate.votes + 1;
     const voteElement = document.getElementById(`candidate${candidateId}`);
-    voteElement.textContent = newVotes;
+    if (voteElement) {
+      voteElement.textContent = newVotes; // Update the displayed vote count
+    }
 
-    // Update server
+    // Update server with the new vote count
     await fetch(`${API_URL}/candidates/${candidateId}`, {
       method: 'PUT',
       headers: {
@@ -22,15 +23,16 @@ async function vote(candidateId) {
       },
       body: JSON.stringify({
         ...candidate,
-        votes: newVotes
+        votes: newVotes,
       }),
     });
-
   } catch (error) {
     console.error('Error voting:', error);
-    // Revert UI on error
+    // If an error occurs, revert the UI
     const voteElement = document.getElementById(`candidate${candidateId}`);
-    voteElement.textContent = candidate.votes;
+    if (voteElement) {
+      voteElement.textContent = candidate.votes;
+    }
     alert('Vote failed - please try again!');
   }
 }
@@ -44,7 +46,7 @@ document.getElementById('registrationForm').addEventListener('submit', async (e)
     gender: e.target.elements[1].value,
     age: e.target.elements[2].value,
     healthIssues: e.target.elements[3].value,
-    timestamp: new Date().toISOString()
+    timestamp: new Date().toISOString(),
   };
 
   try {
@@ -71,7 +73,7 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
     name: e.target.elements[0].value,
     email: e.target.elements[1].value,
     message: e.target.elements[2].value,
-    timestamp: new Date().toISOString()
+    timestamp: new Date().toISOString(),
   };
 
   try {
@@ -96,6 +98,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     const response = await fetch(`${API_URL}/candidates`);
     const candidates = await response.json();
     
+    // Loop through each candidate and display their vote count
     candidates.forEach(candidate => {
       const voteElement = document.getElementById(`candidate${candidate.id}`);
       if (voteElement) {

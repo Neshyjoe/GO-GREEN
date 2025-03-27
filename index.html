@@ -57,22 +57,26 @@
     <section class="giveaway">
         <div class="container">
             <h2>Eco-Champion Vote</h2>
-            <div class="candidates">
-                <div class="candidate">
+            <div class="candidate">
+                <div class="candidate1">
                     <h3>Joash Victor</h3>
                     <p>Votes: <span id="candidate1">0</span></p>
-                    <button onclick="vote(1)">Vote</button>
+                    <button onclick="vote(1)" class="vote-button">Vote</button>
                 </div>
-                <div class="candidate">
+                <div class="candidate2">
                     <h3>Martha Mercy</h3>
                     <p>Votes: <span id="candidate2">0</span></p>
-                    <button onclick="vote(2)">Vote</button>
+                    <button onclick="vote(2)" class="vote-button">Vote</button>
                 </div>
-                <div class="candidate">
+                <div class="candidate3">
                     <h3>Laban Kelvin</h3>
                     <p>Votes: <span id="candidate3">0</span></p>
-                    <button onclick="vote(3)">Vote</button>
+                    <button onclick="vote(3)" class="vote-button">Vote</button>
                 </div>
+
+                <div id="candidate1" class="vote-count">0</div>
+                <div id="candidate2" class="vote-count">0</div>
+                <div id="candidate3" class="vote-count">0</div>
             </div>
         </div>
     </section>

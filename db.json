@@ -31,6 +31,38 @@
       "age": "21",
       "healthIssues": "None",
       "timestamp": "2025-03-27T17:31:28.732Z"
+    },
+    {
+      "id": "d85f",
+      "name": "Joash",
+      "gender": "male",
+      "age": "21",
+      "healthIssues": "none",
+      "timestamp": "2025-03-27T18:48:15.471Z"
+    },
+    {
+      "id": "f788",
+      "name": "Joash",
+      "gender": "male",
+      "age": "21",
+      "healthIssues": "none",
+      "timestamp": "2025-03-28T05:51:36.428Z"
+    },
+    {
+      "id": "ab3c",
+      "name": "Martha",
+      "gender": "female",
+      "age": "20",
+      "healthIssues": "none",
+      "timestamp": "2025-03-28T05:55:37.926Z"
+    },
+    {
+      "id": "d05e",
+      "name": "James",
+      "gender": "male",
+      "age": "21",
+      "healthIssues": "None",
+      "timestamp": "2025-03-28T07:01:05.449Z"
     }
   ],
   "votes": [],
@@ -39,17 +71,17 @@
     {
       "id": "1",
       "name": "Joash Victor",
-      "votes": 251
+      "votes": 265
     },
     {
       "id": "2",
       "name": "Martha Mercy",
-      "votes": 160
+      "votes": 187
     },
     {
       "id": "3",
       "name": "Laban Kelvin",
-      "votes": 194
+      "votes": 213
     }
   ]
 }

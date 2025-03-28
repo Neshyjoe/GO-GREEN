@@ -153,3 +153,18 @@ document.getElementById('addCandidateForm').addEventListener('submit', async (e)
       alert(error.message || 'Failed to add candidate!');
   }
 });
+// backend validation (Node.js example):
+app.post('/candidates', (req, res) => {
+  if (!req.body.name || req.body.name.trim() === '') {
+      return res.status(400).json({ error: 'Name is required' });
+  }
+  
+  const newCandidate = {
+      id: candidates.length + 1,
+      name: req.body.name.trim(),
+      votes: 0
+  };
+  
+  candidates.push(newCandidate);
+  res.status(201).json(newCandidate);
+});

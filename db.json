@@ -79,17 +79,22 @@
     {
       "id": "1",
       "name": "Joash Victor",
-      "votes": 268
+      "votes": 270
     },
     {
       "id": "2",
       "name": "Martha Mercy",
-      "votes": 190
+      "votes": 192
     },
     {
       "id": "3",
       "name": "Laban Kelvin",
-      "votes": 217
+      "votes": 219
+    },
+    {
+      "id": "4",
+      "name": "James Mwangi",
+      "votes": 289
     }
   ]
 }

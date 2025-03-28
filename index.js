@@ -110,3 +110,46 @@ window.addEventListener('DOMContentLoaded', async () => {
     alert('Could not load voting data - please refresh the page!');
   }
 });
+// Add New Candidate Functionality
+document.getElementById('addCandidateForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  
+  const candidateName = document.getElementById('candidateName').value;
+  
+  if (!candidateName) {
+      alert('Please enter a candidate name!');
+      return;
+  }
+
+  try {
+      const response = await fetch(`${API_URL}/candidates`, {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+              name: kelly,
+              votes: 298
+          }),
+      });
+
+      const newCandidate = await response.json();
+      
+      // Create new candidate element
+      const candidatesDiv = document.querySelector('.candidate');
+      const newCandidateDiv = document.createElement('div');
+      newCandidateDiv.className = `candidate${newCandidate.id}`;
+      newCandidateDiv.innerHTML = `
+          <h3>${newCandidate.name}</h3>
+          <p>Votes: <span id="candidate${newCandidate.id}">0</span></p>
+          <button onclick="vote(${newCandidate.id})" class="vote-button">Vote</button>
+      `;
+
+      candidatesDiv.appendChild(newCandidateDiv);
+      document.getElementById('candidateName').value = '';
+      alert('Candidate added successfully!');
+  } catch (error) {
+      console.error('Error adding candidate:', error);
+      alert('Failed to add candidate!');
+  }
+});

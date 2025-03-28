@@ -104,6 +104,28 @@ button {
     cursor: pointer;
 }
 
+/* Add Candidate Section */
+.add-candidate {
+  background: #f5f5f5;
+  padding: 2rem 0;
+}
+
+.add-candidate form {
+  display: flex;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.add-candidate input {
+  flex: 1;
+  padding: 0.8rem;
+}
+
+.add-candidate button {
+  padding: 0.8rem 2rem;
+}
+
 /* Voting Section */
 .candidates {
     display: flex;

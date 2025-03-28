@@ -63,4 +63,4 @@ This website helps people:
 - power point - https://1drv.ms/p/c/ff4e175881cd15ac/EcBA82GNahVIopxA-_LVEyUBqPbpPWWYPZGxXScrVyZPBg?e=2ES8YK
 - word problem statment - https://1drv.ms/w/c/ff4e175881cd15ac/EabwjBceQmFNpy8042a0b44BDmVMuHHG_Em0fCTerwTl4w?e=FzJag
 - API link - https://neshyjoe.github.io/host_api/db.json
-- Deployrd link - https://vercel.com/joash-victors-projects/go-green
+- Deployrd link - go-green-rho.vercel.app

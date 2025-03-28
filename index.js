@@ -153,22 +153,3 @@ document.getElementById('addCandidateForm').addEventListener('submit', async (e)
       alert(error.message || 'Failed to add candidate!');
   }
 });
-      
-      // Create new candidate element
-      const candidatesDiv = document.querySelector('.candidate');
-      const newCandidateDiv = document.createElement('div');
-      newCandidateDiv.className = `candidate${newCandidate.id}`;
-      newCandidateDiv.innerHTML = `
-          <h3>${newCandidate.name}</h3>
-          <p>Votes: <span id="candidate${newCandidate.id}">0</span></p>
-          <button onclick="vote(${newCandidate.id})" class="vote-button">Vote</button>
-      `;
-
-      candidatesDiv.appendChild(newCandidateDiv);
-      document.getElementById('candidateName').value = '';
-      alert('Candidate added successfully!');
-  } catch (error) {
-      console.error('Error adding candidate:', error);
-      alert('Failed to add candidate!');
-  }
-});

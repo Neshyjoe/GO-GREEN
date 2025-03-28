@@ -114,7 +114,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 document.getElementById('addCandidateForm').addEventListener('submit', async (e) => {
   e.preventDefault();
   
-  const candidateName = document.getElementById('candidateName').value;
+  const candidateName = document.getElementById('candidateName').value.trim();
   
   if (!candidateName) {
       alert('Please enter a candidate name!');
@@ -124,16 +124,35 @@ document.getElementById('addCandidateForm').addEventListener('submit', async (e)
   try {
       const response = await fetch(`${API_URL}/candidates`, {
           method: 'POST',
-          headers: {
-              'Content-Type': 'application/json',
-          },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-              name: kelly,
-              votes: 298
+              name: candidateName,
+              votes: 0
           }),
       });
 
+      if (!response.ok) throw new Error('Server error');
+      
       const newCandidate = await response.json();
+      
+      // Create new candidate element
+      const candidatesDiv = document.querySelector('.candidate');
+      const newCandidateDiv = document.createElement('div');
+      newCandidateDiv.innerHTML = `
+          <div class="candidate-item">
+              <h3>${newCandidate.name}</h3>
+              <p>Votes: <span id="candidate${newCandidate.id}">0</span></p>
+              <button onclick="vote(${newCandidate.id})" class="vote-button">Vote</button>
+          </div>
+      `;
+
+      candidatesDiv.appendChild(newCandidateDiv);
+      document.getElementById('candidateName').value = '';
+  } catch (error) {
+      console.error('Error adding candidate:', error);
+      alert(error.message || 'Failed to add candidate!');
+  }
+});
       
       // Create new candidate element
       const candidatesDiv = document.querySelector('.candidate');

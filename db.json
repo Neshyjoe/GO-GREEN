@@ -71,6 +71,14 @@
       "age": "21",
       "healthIssues": "none",
       "timestamp": "2025-03-28T07:26:37.936Z"
+    },
+    {
+      "id": "a822",
+      "name": "James Mwangi",
+      "gender": "male",
+      "age": "22",
+      "healthIssues": "none",
+      "timestamp": "2025-03-28T09:16:12.175Z"
     }
   ],
   "votes": [],
@@ -79,22 +87,22 @@
     {
       "id": "1",
       "name": "Joash Victor",
-      "votes": 275
+      "votes": 283
     },
     {
       "id": "2",
       "name": "Martha Mercy",
-      "votes": 195
+      "votes": 242
     },
     {
       "id": "3",
       "name": "Laban Kelvin",
-      "votes": 222
+      "votes": 231
     },
     {
       "id": "4",
       "name": "James Mwangi",
-      "votes": 292
+      "votes": 300
     }
   ]
 }

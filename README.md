@@ -47,13 +47,13 @@ This website helps people:
     2.Displays the most recent vote counts.
     3.Makes sure numbers match in browser and server even after refreshing.
 
-    
+
 ### Requirements
 - Web browser (Chrome)
 - Code editor (VS Code )
 - Internet connection
 
-# Machine languages used 
+# Technologies used 
 -HTML
 -CSS
 -JAVASCRIPT
@@ -62,6 +62,5 @@ This website helps people:
 ### Required links
 - power point - https://1drv.ms/p/c/ff4e175881cd15ac/EcBA82GNahVIopxA-_LVEyUBqPbpPWWYPZGxXScrVyZPBg?e=2ES8YK
 - word problem statment - https://1drv.ms/w/c/ff4e175881cd15ac/EabwjBceQmFNpy8042a0b44BDmVMuHHG_Em0fCTerwTl4w?e=FzJag
-- Word link - https://1drv.ms/w/c/ff4e175881cd15ac/EabwjBceQmFNpy8042a0b44BDmVMuHHG_Em0fCTerwTl4w?e=FzJage
-- API link - 
+- API link - https://neshyjoe.github.io/host_api/db.json
 - Deployrd link - https://vercel.com/joash-victors-projects/go-green
